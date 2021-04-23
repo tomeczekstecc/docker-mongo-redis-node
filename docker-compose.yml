@@ -18,17 +18,12 @@ services:
 
   mongo:
     image: mongo
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=tomek
-      - MONGO_INITDB_ROOT_PASSWORD=secret
+    env_file: ./.env.prod
     volumes:
       - mongo-db:/data/db
 
   redis:
     image: redis
-
-
-
 
 volumes:
   mongo-db:

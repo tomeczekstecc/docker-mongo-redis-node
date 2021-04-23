@@ -10,9 +10,8 @@ services:
       context: .
       args:
         NODE_ENV: production
-    environment:
+      env_file: /.env.prod
+      environment:
       - NODE_ENV=production
-      - MONGO_USER=${MONGO_USER}
-      - MONGO_PASSWORD=secret
-      - SESSION_SECRET=secret
+
     command: node index.js

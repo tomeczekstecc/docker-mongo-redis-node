@@ -70,7 +70,7 @@ app.use('/api/v1/users', authRouter);
 const port = process.env.PORT;
 
 app.get('/api/v1', (req, res) => {
-    res.send('<h2>Hi there !!!!!!</h2> ');
+    res.send('<h2>Hi there !</h2> ');
     let num = 0
     console.log(`Yeah it ran ${num+1}`)
 });

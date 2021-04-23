@@ -10,7 +10,8 @@ services:
       context: .
       args:
         NODE_ENV: production
-      env_file: /.env.prod
+      env_file:
+        - /.env.prod
       environment:
         - NODE_ENV=production
 
